@@ -1,13 +1,12 @@
-from django.shortcuts import render
-
-# Create your views here.from django.shortcuts import render
-from django.shortcuts import redirect
-
-def redirect_to_gallery(request):
-    return redirect('/gallary')
-def home(request):
-    return render(request,'gallery.html')
-def contact(request):
-    return render(request,'contact.html')
+from django.shortcuts import render, redirect
 
 # Create your views here.
+
+def redirect_to_home(request):
+    return redirect('/home')
+
+def home(request):
+    return render(request, 'home.html')
+
+def contact(request):
+    return render(request, 'contact.html')
